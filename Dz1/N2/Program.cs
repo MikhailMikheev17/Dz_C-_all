@@ -15,6 +15,6 @@ int numS = Convert.ToInt32(numSecond);
 
 if (numF > numS )
 {
-  Console.WriteLine(" The First number is bigger than the second one");
+    Console.WriteLine($"max = {numF }");
 }
-else Console.WriteLine("The Second number is bigger than the first one");
+else Console.WriteLine($"max = {numS }");
