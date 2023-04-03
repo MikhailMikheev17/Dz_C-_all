@@ -6,39 +6,22 @@
 
 Console.Clear();
 
-int Prompt(string message)
-{
-  Console.Write(message);
-  string value = Console.ReadLine();
-  int result = Convert.ToInt32(value);
-  return result;
-}
+System.Console.WriteLine("Enter a number : ");
+int num = int.Parse(Console.ReadLine());
 
-int GetThirdRank(int number)
+if( num < 100)
 {
-  while (number > 999)
+  System.Console.WriteLine("No third rank");
+}
+else 
+{
+  while(num > 999)
   {
-    number /= 10;
+    num = num /= 10;
   }
-  return number % 10;
+  num = num%10;
 }
-
-bool ValidateNumber(int number)
-{
-  if (number < 100)
-  {
-    Console.WriteLine("No Third Rank");
-    return false;
-  }
-  return true;
-}
-
-int number = Prompt(" Enter a number > ");
-if (ValidateNumber(number))
-{
-  Console.WriteLine(GetThirdRank);
-}
-
+System.Console.WriteLine($"{num}");
 
 
 
