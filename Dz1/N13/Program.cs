@@ -19,9 +19,10 @@ else
   {
     num = num /= 10;
   }
-  num = num%10;
+  int result  = num%10;
+  System.Console.WriteLine($"{result}");
 }
-System.Console.WriteLine($"{num}");
+
 
 
 
