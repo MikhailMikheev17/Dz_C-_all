@@ -20,18 +20,7 @@ void Start()
   int[,] matrix = GetMatrix(rows, columns, min, max);
   PrintMatrix(matrix);
 
-  
-  for (int j = 0; j < matrix.GetLength(1); j++)
-  {
-    double Sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-      Sum += matrix[i, j];
-    }
-    Console.Write($"{Sum / matrix.GetLength(0)} ");
-  }
-
-  //GetSrAr(matrix);
+  GetSrAr(matrix);
 }
 
 int SetNumber(string numberName)
@@ -71,4 +60,15 @@ void PrintMatrix(int[,] matrix)
 }
 
 
-
+void GetSrAr(int[,] array)
+{
+  for (int j = 0; j < array.GetLength(1); j++)
+  {
+    double Sum = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      Sum += array[i, j];
+    }
+    Console.Write($"{Math.Round(Sum / array.GetLength(0), 2)} ");
+  }
+}
