@@ -11,7 +11,8 @@ void Start()
   int m = SetNumber("M ");
   int n = SetNumber("N ");
 
-  GetNatural(n,m);
+  //NaturalToLow(n,m);
+  NaturalMToN(n, m);
 }
 
 int SetNumber(string numberName)
@@ -21,12 +22,20 @@ int SetNumber(string numberName)
   return num;
 }
 
-void GetNatural(int n, int m)
+void NaturalToLow(int n, int count)
 {
-  if (m > n )
-for (int i = n; i <= m; i++)
-    Console.Write($" {i}");
-else
-    for (int i = m; i <= n; i++)
-        Console.Write($" {i}");
+    if (count > n)
+    {
+        return;
+    }
+    else
+    {
+        NaturalToLow(n, count + 1);
+        Console.Write(count + " ");
+    }
+}
+
+void NaturalMToN(int n, int m)
+{
+  NaturalToLow(n, m );
 }
